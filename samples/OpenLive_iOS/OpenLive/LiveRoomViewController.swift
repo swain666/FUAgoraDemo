@@ -25,26 +25,25 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet var fuDemoBar: FUAPIDemoBar! {
         
         didSet {
-            fuDemoBar.itemsDataSource = ["noitem","tiara", "item0208", "YellowEar", "PrincessCrown", "Mood" , "Deer" , "BeagleDog", "item0501", "ColorCrown", "item0210",  "HappyRabbi", "item0204", "hartshorn"]
+            fuDemoBar.itemsDataSource = ["noitem", "tiara", "item0208", "YellowEar", "PrincessCrown", "Mood", "Deer", "BeagleDog", "item0501", "item0210",  "HappyRabbi", "item0204", "hartshorn", "ColorCrown"]
             fuDemoBar.selectedItem = fuDemoBar.itemsDataSource[1]
             
             fuDemoBar.filtersDataSource = ["nature", "delta", "electric", "slowlived", "tokyo", "warm"]
             fuDemoBar.selectedFilter = fuDemoBar.filtersDataSource[0]
             
-            fuDemoBar.selectedBlur = 5
-            
-            fuDemoBar.beautyLevel = 1.0
-            
-            fuDemoBar.enlargingLevel = 1.0
-            
+            fuDemoBar.selectedBlur = 6
+            fuDemoBar.beautyLevel = 0.2
             fuDemoBar.thinningLevel = 1.0
-            
+            fuDemoBar.enlargingLevel = 0.5
+            fuDemoBar.faceShapeLevel = 0.5
+            fuDemoBar.faceShape = 3
+            fuDemoBar.redLevel = 0.5
             fuDemoBar.delegate = self
         }
     }
     
     //MARK: Faceunity
-    var mcontext:EAGLContext!
+    static var mcontext:EAGLContext!
     var items:[Int32] = [0,0]
     var fuInit:Bool = false
     var frameID:Int32 = 0
@@ -134,6 +133,7 @@ class LiveRoomViewController: UIViewController {
         loadAgoraKit()
     }
     
+    
     //MARK: - user action
     @IBAction func doSwitchCameraPressed(_ sender: UIButton) {
         rtcEngine?.switchCamera()
@@ -159,6 +159,7 @@ class LiveRoomViewController: UIViewController {
         shouldYuvProcessor = isBroadcaster
         rtcEngine.setClientRole(clientRole, withKey: nil)
         updateInterface(withAnimation :true)
+        
     }
     
     @IBAction func doDoubleTapped(_ sender: UITapGestureRecognizer) {
@@ -208,14 +209,10 @@ private extension LiveRoomViewController {
         if shouldYuvProcessor {
             //离开时关闭YuvProcessor,并销毁美颜及道具内存
             shouldYuvProcessor = false
-            if items[0] != 0 {
-                fuDestroyItem(items[0])
-            }
-            if items[1] != 0 {
-                fuDestroyItem(items[1])
-            }
-            fuOnDeviceLost()
+            
             //-------------faceunity--------------
+            setupContex()
+            fuDestroyAllItems()
         }
         
         delegate?.liveVCNeedClose(self)
@@ -374,13 +371,8 @@ extension LiveRoomViewController: FUAPIDemoBarDelegate
 extension LiveRoomViewController: YuvPreProcessorProtocol {
     func onFrameAvailable(_ y: UnsafeMutablePointer<UInt8>, ubuf u: UnsafeMutablePointer<UInt8>, vbuf v: UnsafeMutablePointer<UInt8>, ystride: Int32, ustride: Int32, vstride: Int32, width: Int32, height: Int32) {
         
-        if mcontext == nil {
-            mcontext = EAGLContext(api: .openGLES2)
-        }
         
-        if mcontext == nil || !EAGLContext.setCurrent(mcontext) {
-            print("context error")
-        }
+        setupContex()
         
         if !fuInit {
             fuInit = true
@@ -401,12 +393,14 @@ extension LiveRoomViewController: YuvPreProcessorProtocol {
         }
         
         //  Set item parameters
-        //  Set item parameters
         fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("cheek_thinning" as NSString).utf8String!), Double(self.fuDemoBar.thinningLevel));//瘦脸
         fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("eye_enlarging" as NSString).utf8String!), Double(self.fuDemoBar.enlargingLevel));//大眼
         fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("color_level" as NSString).utf8String!), Double(self.fuDemoBar.beautyLevel));//美白
-        fuItemSetParams(items[1], UnsafeMutablePointer(mutating: ("filter_name" as NSString).utf8String!), UnsafeMutablePointer(mutating: (fuDemoBar.selectedFilter as NSString).utf8String!));
-        fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("blur_level" as NSString).utf8String!), Double(self.fuDemoBar.selectedBlur));
+        fuItemSetParams(items[1], UnsafeMutablePointer(mutating: ("filter_name" as NSString).utf8String!), UnsafeMutablePointer(mutating: (fuDemoBar.selectedFilter as NSString).utf8String!));// 滤镜
+        fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("blur_level" as NSString).utf8String!), Double(self.fuDemoBar.selectedBlur));// 磨皮
+        fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("face_shape" as NSString).utf8String!), Double(self.fuDemoBar.faceShape));//瘦脸类型
+        fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("face_shape_level" as NSString).utf8String!), Double(self.fuDemoBar.faceShapeLevel));//瘦脸等级
+        fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("red_level" as NSString).utf8String!), Double(self.fuDemoBar.redLevel));//红润
         
         FURenderer.share().renderFrame(y, u: u, v: v, ystride: ystride, ustride: ustride, vstride: vstride, width: width, height: height, frameId: frameID, items: UnsafeMutablePointer<Int32>(mutating: items)!, itemCount: 2);
         
@@ -418,29 +412,49 @@ extension LiveRoomViewController: YuvPreProcessorProtocol {
 //MARK: -Faceunity Data Load
 extension LiveRoomViewController
 {
-    func reloadItem()
-    {
-        if items[0] != 0 {
-            print("faceunity: destroy item")
-            fuDestroyItem(items[0])
+    
+    func setupContex() {
+        
+        if LiveRoomViewController.mcontext == nil {
+            LiveRoomViewController.mcontext = EAGLContext(api: .openGLES2)
         }
         
+        if LiveRoomViewController.mcontext == nil || !EAGLContext.setCurrent(LiveRoomViewController.mcontext) {
+            print("context error")
+        }
+    }
+    
+    func reloadItem()
+    {
+        setupContex()
         if fuDemoBar.selectedItem == "noitem" || fuDemoBar.selectedItem == nil
         {
+            if items[0] != 0 {
+                fuDestroyItem(items[0])
+            }
             items[0] = 0
-            return;
+            return
         }
         
         var size:Int32 = 0
         // load selected
         let data = mmap_bundle(bundle: fuDemoBar.selectedItem + ".bundle", psize: &size)
-        items[0] = fuCreateItemFromPackage(data, size)
+        
+        let itemHandle = fuCreateItemFromPackage(data, size)
+        
+        if items[0] != 0 {
+            fuDestroyItem(items[0])
+        }
+        
+        items[0] = itemHandle
         
         print("faceunity: load item")
     }
     
     func loadFilter()
     {
+        setupContex()
+        
         var size:Int32 = 0
         
         let data = mmap_bundle(bundle: "face_beautification.bundle", psize: &size)

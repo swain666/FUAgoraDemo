@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ypF-Of-0Eu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ypF-Of-0Eu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -130,7 +130,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bt9-fa-Ty0" id="1Fe-K2-1hC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJA-Kg-DSh">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnm-E5-ihB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="-400"/>
+            <point key="canvasLocation" x="1889" y="1"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -307,7 +307,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUS-G6-i97">
-                                <rect key="frame" x="0.0" y="495" width="54" height="54"/>
+                                <rect key="frame" x="0.0" y="405" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="pEa-Xm-qqP"/>
                                     <constraint firstAttribute="width" constant="54" id="ubF-f3-YeG"/>
@@ -318,7 +318,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjS-OE-tLx">
-                                <rect key="frame" x="54" y="495" width="54" height="54"/>
+                                <rect key="frame" x="54" y="405" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="2fF-sg-lSK"/>
                                     <constraint firstAttribute="height" constant="54" id="uuJ-Zr-A7D"/>
@@ -329,7 +329,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtZ-41-ZXH">
-                                <rect key="frame" x="108" y="495" width="54" height="54"/>
+                                <rect key="frame" x="108" y="405" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="1fh-3W-Zuy"/>
                                     <constraint firstAttribute="width" constant="54" id="Jc0-n4-hB6"/>
@@ -340,7 +340,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zj-LW-uYj">
-                                <rect key="frame" x="321" y="495" width="54" height="54"/>
+                                <rect key="frame" x="321" y="405" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="dRc-j0-dOe"/>
                                     <constraint firstAttribute="width" constant="54" id="tIs-7B-8jY"/>
@@ -362,9 +362,9 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-ve-lh8" customClass="FUAPIDemoBar">
-                                <rect key="frame" x="0.0" y="549" width="375" height="118"/>
+                                <rect key="frame" x="0.0" y="459" width="375" height="208"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="cX4-iq-UIi"/>
+                                    <constraint firstAttribute="height" constant="208" id="cX4-iq-UIi"/>
                                 </constraints>
                             </containerView>
                         </subviews>
@@ -410,7 +410,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1956" y="340"/>
+            <point key="canvasLocation" x="1889" y="676"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YP6-vi-gpL">

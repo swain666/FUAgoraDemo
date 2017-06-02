@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -228,7 +228,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O7Q-TD-vDy" id="l8E-xt-mii">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-yS-cJn">
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7r-DH-gej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1403" y="549"/>
+            <point key="canvasLocation" x="2177" y="952"/>
         </scene>
         <!--Room View Controller-->
         <scene sceneID="AXD-PF-mBI">
@@ -340,7 +340,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EZ-3L-9sf">
-                                <rect key="frame" x="6" y="373" width="200" height="120"/>
+                                <rect key="frame" x="6" y="293" width="200" height="120"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="h0y-tW-OU3"/>
@@ -386,7 +386,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-vu-hG6">
-                                <rect key="frame" x="0.0" y="429" width="375" height="238"/>
+                                <rect key="frame" x="0.0" y="349" width="375" height="318"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNw-RY-th5">
                                         <rect key="frame" x="5" y="55" width="50" height="50"/>
@@ -465,9 +465,9 @@
                                         </connections>
                                     </button>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcG-1K-Lzy" customClass="FUAPIDemoBar">
-                                        <rect key="frame" x="0.0" y="110" width="375" height="128"/>
+                                        <rect key="frame" x="0.0" y="110" width="375" height="208"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="7JX-bn-aqj"/>
+                                            <constraint firstAttribute="height" constant="208" id="7JX-bn-aqj"/>
                                         </constraints>
                                     </containerView>
                                 </subviews>
@@ -504,7 +504,7 @@
                             <constraint firstItem="4EZ-3L-9sf" firstAttribute="leading" secondItem="Hic-nH-KJB" secondAttribute="leading" constant="6" id="7WU-zb-4HP"/>
                             <constraint firstItem="aST-1g-gu6" firstAttribute="top" secondItem="Hic-nH-KJB" secondAttribute="top" id="Ii3-Gg-F35"/>
                             <constraint firstAttribute="bottom" secondItem="zIR-Zw-goH" secondAttribute="bottom" id="Q3n-6o-JR4"/>
-                            <constraint firstItem="zIR-Zw-goH" firstAttribute="top" secondItem="4EZ-3L-9sf" secondAttribute="bottom" constant="120" id="ToD-IA-UNS"/>
+                            <constraint firstItem="zIR-Zw-goH" firstAttribute="top" secondItem="4EZ-3L-9sf" secondAttribute="bottom" constant="200" id="ToD-IA-UNS"/>
                             <constraint firstAttribute="bottom" secondItem="Ctt-vu-hG6" secondAttribute="bottom" id="Wfq-6E-I82"/>
                             <constraint firstAttribute="bottom" secondItem="aST-1g-gu6" secondAttribute="bottom" id="ZFO-na-3Ba"/>
                             <constraint firstItem="zIR-Zw-goH" firstAttribute="leading" secondItem="Hic-nH-KJB" secondAttribute="leading" id="bAI-CW-U4C"/>
@@ -554,7 +554,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2144.8000000000002" y="1272.4137931034484"/>
+            <point key="canvasLocation" x="2177" y="1623"/>
         </scene>
         <!--Chat Message View Controller-->
         <scene sceneID="nsy-GQ-x4G">
@@ -640,7 +640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgr-Ec-hnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="1843"/>
+            <point key="canvasLocation" x="2176" y="2082"/>
         </scene>
     </scenes>
     <resources>
