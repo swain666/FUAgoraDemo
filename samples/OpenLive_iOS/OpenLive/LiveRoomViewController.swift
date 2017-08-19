@@ -25,7 +25,7 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet var fuDemoBar: FUAPIDemoBar! {
         
         didSet {
-            fuDemoBar.itemsDataSource = ["noitem", "tiara", "item0208", "YellowEar", "PrincessCrown", "Mood", "Deer", "BeagleDog", "item0501", "item0210",  "HappyRabbi", "item0204", "hartshorn", "ColorCrown"]
+            fuDemoBar.itemsDataSource = ["noitem", "yuguan", "yazui", "mask_matianyu", "lixiaolong", "EatRabbi", "Mood"]
             fuDemoBar.selectedItem = fuDemoBar.itemsDataSource[1]
             
             fuDemoBar.filtersDataSource = ["nature", "delta", "electric", "slowlived", "tokyo", "warm"]

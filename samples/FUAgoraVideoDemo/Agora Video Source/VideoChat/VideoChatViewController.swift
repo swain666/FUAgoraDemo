@@ -30,7 +30,8 @@ class VideoChatViewController: UIViewController {
     
     lazy var fuDemoBar: FUAPIDemoBar = {
         let bar = FUAPIDemoBar.init(frame: CGRect.init(x: 0, y: self.view.frame.size.height, width: self.view.frame.size.width, height: 208))
-        bar.itemsDataSource = ["noitem", "BeagleDog","ColorCrown","Deer","HappyRabbi","hartshorn","item0204","item0208","item0210","item0501","Mood","PrincessCrown","tiara","YellowEar"]
+        bar.itemsDataSource = ["noitem", "yuguan", "yazui", "mask_matianyu", "lixiaolong", "EatRabbi", "Mood"]
+        
         bar.selectedItem = bar.itemsDataSource[1]
 
         bar.filtersDataSource = ["nature", "delta", "electric", "slowlived", "tokyo", "warm"]
