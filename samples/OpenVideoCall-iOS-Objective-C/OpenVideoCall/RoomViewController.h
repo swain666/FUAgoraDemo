@@ -1,0 +1,21 @@
+//
+//  RoomViewController.h
+//  OpenVideoCall
+//
+//  Created by GongYuhua on 2016/9/12.
+//  Copyright © 2016年 Agora. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
+
+@class RoomViewController;
+@protocol RoomVCDelegate <NSObject>
+- (void)roomVCNeedClose:(RoomViewController *)roomVC;
+@end
+
+@interface RoomViewController : UIViewController
+@property (copy, nonatomic) NSString *roomName;
+@property (assign, nonatomic) AgoraRtcVideoProfile videoProfile;
+@property (weak, nonatomic) id<RoomVCDelegate> delegate;
+@end
