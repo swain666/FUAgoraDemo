@@ -217,7 +217,7 @@ extension VideoChatViewController: MyVideoCaptureDelegate {
         let videoFrame = AgoraVideoFrame()
         videoFrame.format = 12
         videoFrame.textureBuf = pixelBuffer
-        videoFrame.timeStamp = Int64(CACurrentMediaTime()*1000)
+        videoFrame.time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
         videoFrame.rotation = Int32(0)
 
         agoraKit?.pushExternalVideoFrame(videoFrame)
