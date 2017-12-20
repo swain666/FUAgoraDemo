@@ -1,80 +1,51 @@
-# OpenLive_iOS
+# Open Live iOS for Swift
 
-Agora OpenLive is a demo of [Agora.io](http://www.agora.io) Interactive Broadcasting - iOS
+*Read this in other languages: [English](README.en.md)*
 
-* Up to 7 hosts / presenters 
-* Any audience can call in to join live conversations 
-* Super low latency, less than 1 second
-* Switch stream type / screen UI freely 
-* Unique anti-packet-loss algorithm  
-* Globally distributed data centers to ensure international usage
+这个开源示例项目演示了如何快速集成Agora视频SDK，实现多人视频连麦直播。
 
-Agora OpenLive 是[声网Agora.io](http://cn.agora.io)多人主播和视频连麦直播demo - iOS
+在这个示例项目中包含了以下功能：
 
-* 最多7人同时主播
-* 观众主播视频连麦
-* 毫秒级超低延迟，秒杀CDN
-* 大小流切换，多主播视窗随意切换
-* 超强抗丢包，网络不好直播仍然流畅
-* 跨洲跨国数据中心，保障直播全球扩展
+- 加入通话和离开通话；
+- 主播和观众模式切换；
+- 静音和解除静音；
+- 切换前置摄像头和后置摄像头；
+- 选择分辨率、码率和帧率；
 
-##Agora OpenLive Overview
+本开源项目使用 **Swift** 语言，你可以在这里找到使用 **Objective-C** 的项目：[OpenLive-iOS-Objective-C](https://github.com/AgoraIO/OpenLive-iOS-Objective-C)
 
-This demo is featuring live interactive broadcasting with the following unique features: 
+你也可以在这里查看入门版的示例项目：[Agora-iOS-Tutorial-Swift-1to1](https://github.com/AgoraIO/Agora-iOS-Tutorial-Swift-1to1)
 
-1. Support 4 hosts by default (can be extended to 7). UI design can be self defined. 
-2. Audiences can call in with audio / video. 
-3. Switch video stream free with different screen UI.
-4. Globally broadcasting.
+Agora视频SDK支持 iOS / Android / Windows / macOS 等多个平台，你可以查看对应各平台的示例项目：
 
-This demo shall be working only with [Agora.io](http://www.agora.io) interactive broadcasting SDK. Please contact <mailto:sales@agora.io>. Developers from China can call 400 632 6626.
+- [OpenLive-Android](https://github.com/AgoraIO/OpenLive-Android)
+- [OpenLive-Windows](https://github.com/AgoraIO/OpenLive-Windows)
+- [OpenLive-macOS](https://github.com/AgoraIO/OpenLive-macOS)
 
-这个Demo模拟的是一个有多人主播同时对话，并且对观众直播的App。主要有4个独特之处：
+## 运行示例程序
+首先在 [Agora.io 注册](https://dashboard.agora.io/cn/signup/) 注册账号，并创建自己的测试项目，获取到 AppID。将 AppID 填写进 KeyCenter.swift
 
-1. 主播人数目前最多可以同时支持4人（SDK支持7人），也可以是4人以下任何人数。可根据场景来自由定义和设计视窗UI；
-2. 支持观众和主播语音／视频连麦；
-3. 支持大小流切换，观众在多视窗观看时，可选择任意主播放大主屏观看；
-4. 支持全球范围的直播，跨国跨洲直播
-
-该Demo需要基于[声网Agora.io](http://cn.agora.io)的实时互动直播技术才能运行。如有需求，请联系<mailto:sales@agora.io>。中国用户可直接拨打400 632 6626。
-
-##Agora.io Interactive Broadcasting
-
-[Agora.io](http://www.agora.io) Interactive Broadcasting is based on UDP featuring super low latency/delay, less than 1 second. This ensures “real time presence” experience when multiple hosts talking lively and when audiences call in.
-
-[Agora.io](http://www.agora.io) has 100 data centers distributed globally. With the virtual network, the broadcasting experience are stable and smooth. 
-
-[Agora.io](http://www.agora.io) Interactive Broadcasting SDK is available for iOS, Android, macOS and Windows, supporting RTMP and HLS. It enables bit rate auto adjustment to adapt to broadcasting under different bandwidth.
-
-This demo does not include broadcasting business server. Developers can build your own business server and interact with [Agora.io](http://www.agora.io) SDK.
-
-[声网Agora.io](http://cn.agora.io)的实时互动直播技术，区别于所有CDN方案。它是全球第一个以UDP为基础的直播方案。与传统CDN方案相比，最大的特点是超低延时，基本都在毫秒级的延迟。这能保证在多个主播及观众连麦时，有“实时对话”的体验。
-
-[声网Agora.io](http://cn.agora.io)在全球部署了将近100个数据中心，加上lastmile算法，有超强抗丢包特点，可以保障全球范围稳定靠谱的直播体验。
-
-[声网Agora.io](http://cn.agora.io)的客户端SDK，支持iOS、Android、macOS和Windows，支持RTMP、HLS协议。另外客户端SDK还支持码率自适应，以适应不同网络环境直播需求。支持美颜。
-
-此Demo不涉及到直播业务服务器部分，此部分一般由开发者自行开发，然后和[声网Agora.io](http://cn.agora.io)直播服务交互。
+```
+static let AppId: String = "Your App ID"
+```
 
 
-## Bug reports
 
-* https://github.com/AgoraLab/OpenLive_iOS/issues
+最后使用 XCode 打开 OpenLive.xcodeproj，连接 iPhone／iPad 测试设备，设置有效的开发者签名后即可运行。
 
+## 运行环境
+* XCode 8.0 +
+* iOS 真机设备
+* 不支持模拟器
 
-## Build Instructions
+## 联系我们
 
-NOTICE: before building, you need to
+- 完整的 API 文档见 [文档中心](https://docs.agora.io/cn/)
+- 如果在集成中遇到问题，你可以到 [开发者社区](https://dev.agora.io/cn/) 提问
+- 如果有售前咨询问题，可以拨打 400 632 6626，或加入官方Q群 12742516 提问
+- 如果需要售后技术支持，你可以在 [Agora Dashboard](https://dashboard.agora.io) 提交工单
+- 如果发现了示例代码的bug，欢迎提交 [issue](https://github.com/AgoraIO/OpenLive-iOS/issues)
 
+## 代码许可
 
-1. update your key at OpenLive/KeyCenter.swift
-
-	you can get your vendor key at https://dashboard.agora.io
-
-
-2. update AgoraRtcEngineKit.framework at OpenLive/libs
-
-3. update videoprp.framework at OpenLive
-
-
-Enjoy video broadcasting!
+The MIT License (MIT).

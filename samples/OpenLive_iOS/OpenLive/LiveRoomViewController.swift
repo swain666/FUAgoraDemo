@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation
+import AgoraRtcEngineKit
 
 protocol LiveRoomVCDelegate: NSObjectProtocol {
     func liveVCNeedClose(_ liveVC: LiveRoomViewController)
@@ -20,12 +20,11 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet weak var broadcastButton: UIButton!
     @IBOutlet var sessionButtons: [UIButton]!
     @IBOutlet weak var audioMuteButton: UIButton!
-    @IBOutlet weak var enhancerButton: UIButton!
     
-    @IBOutlet var fuDemoBar: FUAPIDemoBar! {
+    @IBOutlet weak var fuDemoBar: FUAPIDemoBar!{
         
         didSet {
-            fuDemoBar.itemsDataSource = ["noitem", "yuguan", "yazui", "mask_matianyu", "lixiaolong", "EatRabbi", "Mood"]
+            fuDemoBar.itemsDataSource = ["noitem", "EatRabbi", "bg_seg", "yazui", "mask_matianyu", "lixiaolong", "Mood", "gradient", "yuguan"]
             fuDemoBar.selectedItem = fuDemoBar.itemsDataSource[1]
             
             fuDemoBar.filtersDataSource = ["nature", "delta", "electric", "slowlived", "tokyo", "warm"]
@@ -38,9 +37,10 @@ class LiveRoomViewController: UIViewController {
             fuDemoBar.faceShapeLevel = 0.5
             fuDemoBar.faceShape = 3
             fuDemoBar.redLevel = 0.5
-            fuDemoBar.delegate = self
+            fuDemoBar.delegate = self as FUAPIDemoBarDelegate
         }
     }
+    
     
     //MARK: Faceunity
     static var mcontext:EAGLContext!
@@ -69,9 +69,6 @@ class LiveRoomViewController: UIViewController {
     var roomName: String!
     var clientRole = AgoraRtcClientRole.clientRole_Audience {
         didSet {
-            if isBroadcaster {
-                shouldYuvProcessor = true
-            }
             updateButtonsVisiablity()
         }
     }
@@ -102,7 +99,7 @@ class LiveRoomViewController: UIViewController {
             } else {
                 agoraEnhancer?.turnOff()
             }
-            enhancerButton?.setImage(UIImage(named: shouldEnhancer ? "btn_beautiful_cancel" : "btn_beautiful"), for: .normal)
+//            enhancerButton?.setImage(UIImage(named: shouldEnhancer ? "btn_beautiful_cancel" : "btn_beautiful"), for: .normal)
         }
     }
     
@@ -133,7 +130,6 @@ class LiveRoomViewController: UIViewController {
         loadAgoraKit()
     }
     
-    
     //MARK: - user action
     @IBAction func doSwitchCameraPressed(_ sender: UIButton) {
         rtcEngine?.switchCamera()
@@ -141,10 +137,6 @@ class LiveRoomViewController: UIViewController {
     
     @IBAction func doMutePressed(_ sender: UIButton) {
         isMuted = !isMuted
-    }
-    
-    @IBAction func doEnhancerPressed(_ sender: UIButton) {
-        shouldEnhancer = !shouldEnhancer
     }
     
     @IBAction func doBroadcastPressed(_ sender: UIButton) {
@@ -156,10 +148,9 @@ class LiveRoomViewController: UIViewController {
         } else {
             clientRole = .clientRole_Broadcaster
         }
-        shouldYuvProcessor = isBroadcaster
+        
         rtcEngine.setClientRole(clientRole, withKey: nil)
         updateInterface(withAnimation :true)
-        
     }
     
     @IBAction func doDoubleTapped(_ sender: UITapGestureRecognizer) {
@@ -186,9 +177,7 @@ private extension LiveRoomViewController {
         broadcastButton?.setImage(UIImage(named: isBroadcaster ? "btn_join_cancel" : "btn_join"), for: UIControlState())
         
         for button in sessionButtons {
-            if button != enhancerButton {
-                button.isHidden = !isBroadcaster
-            }
+            button.isHidden = !isBroadcaster
         }
     }
     
@@ -206,6 +195,8 @@ private extension LiveRoomViewController {
         }
         videoSessions.removeAll()
         
+        delegate?.liveVCNeedClose(self)
+        
         if shouldYuvProcessor {
             //离开时关闭YuvProcessor,并销毁美颜及道具内存
             shouldYuvProcessor = false
@@ -214,8 +205,6 @@ private extension LiveRoomViewController {
             setupContex()
             fuDestroyAllItems()
         }
-        
-        delegate?.liveVCNeedClose(self)
     }
     
     func setIdleTimerActive(_ active: Bool) {
@@ -326,18 +315,18 @@ private extension LiveRoomViewController {
 }
 
 extension LiveRoomViewController: AgoraRtcEngineDelegate {
-    func rtcEngine(_ engine: AgoraRtcEngineKit!, firstRemoteVideoDecodedOfUid uid: UInt, size: CGSize, elapsed: Int) {
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
         let userSession = videoSession(ofUid: Int64(uid))
         rtcEngine.setupRemoteVideo(userSession.canvas)
     }
     
-    func rtcEngine(_ engine: AgoraRtcEngineKit!, firstLocalVideoFrameWith size: CGSize, elapsed: Int) {
+    func rtcEngine(_ engine: AgoraRtcEngineKit, firstLocalVideoFrameWith size: CGSize, elapsed: Int) {
         if let _ = videoSessions.first {
             updateInterface(withAnimation: false)
         }
     }
     
-    func rtcEngine(_ engine: AgoraRtcEngineKit!, didOfflineOfUid uid: UInt, reason: AgoraRtcUserOfflineReason) {
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid: UInt, reason: AgoraRtcUserOfflineReason) {
         var indexToDelete: Int?
         for (index, session) in videoSessions.enumerated() {
             if session.uid == Int64(uid) {
@@ -402,11 +391,12 @@ extension LiveRoomViewController: YuvPreProcessorProtocol {
         fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("face_shape_level" as NSString).utf8String!), Double(self.fuDemoBar.faceShapeLevel));//瘦脸等级
         fuItemSetParamd(items[1], UnsafeMutablePointer(mutating: ("red_level" as NSString).utf8String!), Double(self.fuDemoBar.redLevel));//红润
         
-        FURenderer.share().renderFrame(y, u: u, v: v, ystride: ystride, ustride: ustride, vstride: vstride, width: width, height: height, frameId: frameID, items: UnsafeMutablePointer<Int32>(mutating: items)!, itemCount: 2);
+//        FURenderer.share().renderFrame(y, u: u, v: v, ystride: ystride, ustride: ustride, vstride: vstride, width: width, height: height, frameId: frameID, items: UnsafeMutablePointer<Int32>(mutating: items)!, itemCount: 2);
+        
+        FURenderer.share().renderFrame(y, u: u, v: v, ystride: ystride, ustride: ustride, vstride: vstride, width: width, height: height, frameId: frameID, items: UnsafeMutablePointer<Int32>(mutating: items)!, itemCount: 2, flipx: true)
         
         frameID += 1
     }
-    
 }
 
 //MARK: -Faceunity Data Load
@@ -448,6 +438,10 @@ extension LiveRoomViewController
         
         items[0] = itemHandle
         
+        if fuDemoBar.selectedItem == "bg_seg" {
+            fuItemSetParamd(items[0], UnsafeMutablePointer(mutating: ("rotationAngle" as NSString).utf8String!), 270.0)
+        }
+        
         print("faceunity: load item")
     }
     
@@ -475,8 +469,7 @@ extension LiveRoomViewController
         if fd == -1 {
             print("faceunity: failed to open bundle")
             size = 0
-        }else
-        {
+        }else {
             size = getFileSize(fd: fd);
             zip = mmap(nil, Int(size), PROT_READ, MAP_SHARED, fd, 0)
         }

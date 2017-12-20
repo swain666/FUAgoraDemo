@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AgoraRtcEngineKit
 
 class ProfileCell: UITableViewCell {
     

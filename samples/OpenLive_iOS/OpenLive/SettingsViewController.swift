@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AgoraRtcEngineKit
 
 protocol SettingsVCDelegate: NSObjectProtocol {
     func settingsVC(_ settingsVC: SettingsViewController, didSelectProfile profile: AgoraRtcVideoProfile)
