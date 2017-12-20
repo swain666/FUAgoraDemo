@@ -35,6 +35,8 @@
 		07F52EBA1D62F39D006DDCD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F52EB81D62F39D006DDCD4 /* Main.storyboard */; };
 		07F52EBC1D62F39D006DDCD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F52EBB1D62F39D006DDCD4 /* Assets.xcassets */; };
 		07F52EBF1D62F39D006DDCD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F52EBD1D62F39D006DDCD4 /* LaunchScreen.storyboard */; };
+		CD63162E1FEA150200FACDFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63162D1FEA150200FACDFA /* SystemConfiguration.framework */; };
+		CD6316301FEA151000FACDFA /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63162F1FEA151000FACDFA /* libresolv.tbd */; };
 		CD75CC0D1E1F67C1003B3CDE /* videoprp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD75CC0C1E1F67C1003B3CDE /* videoprp.framework */; };
 		E9834B541F31EF49001FC17D /* libnama.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9834B471F31EF49001FC17D /* libnama.a */; };
 		E9834B551F31EF49001FC17D /* release_note.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9834B481F31EF49001FC17D /* release_note.txt */; };
@@ -99,14 +101,16 @@
 		07F52EBB1D62F39D006DDCD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F52EBE1D62F39D006DDCD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07F52EC01D62F39D006DDCD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD63162D1FEA150200FACDFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CD63162F1FEA151000FACDFA /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		CD75CC0C1E1F67C1003B3CDE /* videoprp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = videoprp.framework; sourceTree = "<group>"; };
 		E9834B421F31EF49001FC17D /* authpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authpack.h; sourceTree = "<group>"; };
 		E9834B451F31EF49001FC17D /* funama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funama.h; sourceTree = "<group>"; };
 		E9834B461F31EF49001FC17D /* FURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FURenderer.h; sourceTree = "<group>"; };
 		E9834B471F31EF49001FC17D /* libnama.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnama.a; sourceTree = "<group>"; };
 		E9834B481F31EF49001FC17D /* release_note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_note.txt; sourceTree = "<group>"; };
-		E9834B4A1F31EF49001FC17D /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
-		E9834B4B1F31EF49001FC17D /* v3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = v3.bundle; sourceTree = "<group>"; };
+		E9834B4A1F31EF49001FC17D /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = face_beautification.bundle; sourceTree = "<group>"; };
+		E9834B4B1F31EF49001FC17D /* v3.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = v3.bundle; sourceTree = "<group>"; };
 		E9834B4C1F31EF49001FC17D /* FUAPIDemoBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FUAPIDemoBar.framework; sourceTree = "<group>"; };
 		E9834B4E1F31EF49001FC17D /* EatRabbi.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = EatRabbi.bundle; sourceTree = "<group>"; };
 		E9834B4F1F31EF49001FC17D /* lixiaolong.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = lixiaolong.bundle; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6316301FEA151000FACDFA /* libresolv.tbd in Frameworks */,
+				CD63162E1FEA150200FACDFA /* SystemConfiguration.framework in Frameworks */,
 				E9EDC8E11EDEA92A00CA2CBD /* Accelerate.framework in Frameworks */,
 				E9834B541F31EF49001FC17D /* libnama.a in Frameworks */,
 				073177F61D80084E0062A68C /* AgoraRtcEngineKit.framework in Frameworks */,
@@ -253,30 +259,30 @@
 		E9834B431F31EF49001FC17D /* FaceUnity-SDK-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E9834B441F31EF49001FC17D /* Header */,
+				E9834B441F31EF49001FC17D /* Headers */,
 				E9834B471F31EF49001FC17D /* libnama.a */,
 				E9834B481F31EF49001FC17D /* release_note.txt */,
-				E9834B491F31EF49001FC17D /* Resource */,
+				E9834B491F31EF49001FC17D /* Resources */,
 			);
 			path = "FaceUnity-SDK-iOS";
 			sourceTree = "<group>";
 		};
-		E9834B441F31EF49001FC17D /* Header */ = {
+		E9834B441F31EF49001FC17D /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				E9834B451F31EF49001FC17D /* funama.h */,
 				E9834B461F31EF49001FC17D /* FURenderer.h */,
 			);
-			path = Header;
+			path = Headers;
 			sourceTree = "<group>";
 		};
-		E9834B491F31EF49001FC17D /* Resource */ = {
+		E9834B491F31EF49001FC17D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E9834B4A1F31EF49001FC17D /* face_beautification.bundle */,
 				E9834B4B1F31EF49001FC17D /* v3.bundle */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E9834B4D1F31EF49001FC17D /* items */ = {
@@ -295,6 +301,8 @@
 		E9EDC8DF1EDEA92900CA2CBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD63162F1FEA151000FACDFA /* libresolv.tbd */,
+				CD63162D1FEA150200FACDFA /* SystemConfiguration.framework */,
 				E9EDC8E01EDEA92A00CA2CBD /* Accelerate.framework */,
 			);
 			name = Frameworks;
