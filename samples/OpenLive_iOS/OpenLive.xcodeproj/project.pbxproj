@@ -30,9 +30,6 @@
 		07D29C381E9E152200C3583C /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C371E9E152200C3583C /* AgoraRtcEngineKit.framework */; };
 		07F531641E275B82009BFE58 /* OpenLiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F531631E275B82009BFE58 /* OpenLiveUITests.swift */; };
 		0B43E6E51FE7A89E00DB4F50 /* videoprp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B43E6E41FE7A89E00DB4F50 /* videoprp.framework */; };
-		0B43E7251FE7A99900DB4F50 /* FUAPIDemoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B43E7081FE7A99900DB4F50 /* FUAPIDemoBar.framework */; };
-		0B43E72B1FE7A9BE00DB4F50 /* FUAPIDemoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B43E7081FE7A99900DB4F50 /* FUAPIDemoBar.framework */; };
-		0B43E72C1FE7A9BE00DB4F50 /* FUAPIDemoBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B43E7081FE7A99900DB4F50 /* FUAPIDemoBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B43E72F1FE7A9CA00DB4F50 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B43E72E1FE7A9C500DB4F50 /* Accelerate.framework */; };
 		CD6316161FEA057E00FACDFA /* release_note.txt in Resources */ = {isa = PBXBuildFile; fileRef = CD6315FE1FEA057D00FACDFA /* release_note.txt */; };
 		CD6316171FEA057E00FACDFA /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6316001FEA057D00FACDFA /* face_beautification.bundle */; };
@@ -47,6 +44,7 @@
 		CD6316241FEA057E00FACDFA /* yazui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6316131FEA057D00FACDFA /* yazui.bundle */; };
 		CD6316251FEA057E00FACDFA /* yuguan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6316141FEA057D00FACDFA /* yuguan.bundle */; };
 		CD6316261FEA05FF00FACDFA /* libnama.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6315FD1FEA057D00FACDFA /* libnama.a */; };
+		CD63166B1FEA24A600FACDFA /* FUAPIDemoBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD63160B1FEA057D00FACDFA /* FUAPIDemoBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0B43E72C1FE7A9BE00DB4F50 /* FUAPIDemoBar.framework in Embed Frameworks */,
+				CD63166B1FEA24A600FACDFA /* FUAPIDemoBar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +100,6 @@
 		07F531651E275B82009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B43E6E41FE7A89E00DB4F50 /* videoprp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = videoprp.framework; sourceTree = "<group>"; };
 		0B43E6E61FE7A8C100DB4F50 /* OpenLive-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenLive-Bridging-Header.h"; sourceTree = "<group>"; };
-		0B43E7081FE7A99900DB4F50 /* FUAPIDemoBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FUAPIDemoBar.framework; sourceTree = "<group>"; };
 		0B43E72E1FE7A9C500DB4F50 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		CD6315F81FEA057D00FACDFA /* authpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authpack.h; sourceTree = "<group>"; };
 		CD6315FB1FEA057D00FACDFA /* funama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funama.h; sourceTree = "<group>"; };
@@ -128,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B43E72F1FE7A9CA00DB4F50 /* Accelerate.framework in Frameworks */,
-				0B43E72B1FE7A9BE00DB4F50 /* FUAPIDemoBar.framework in Frameworks */,
 				0745273D1E9E050C0054D2D4 /* libresolv.tbd in Frameworks */,
 				0790F1641D1EBE24003F8C18 /* libc++.tbd in Frameworks */,
 				07D29C381E9E152200C3583C /* AgoraRtcEngineKit.framework in Frameworks */,
@@ -141,7 +137,6 @@
 				0790F1161D1E632D003F8C18 /* CoreMedia.framework in Frameworks */,
 				CD6316261FEA05FF00FACDFA /* libnama.a in Frameworks */,
 				0790F1141D1E6325003F8C18 /* AVFoundation.framework in Frameworks */,
-				0B43E7251FE7A99900DB4F50 /* FUAPIDemoBar.framework in Frameworks */,
 				CD63161D1FEA057E00FACDFA /* FUAPIDemoBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +182,6 @@
 		078012EB1D1E57730093DE24 /* OpenLive */ = {
 			isa = PBXGroup;
 			children = (
-				0B43E7051FE7A99900DB4F50 /* DemoCode */,
 				CD6315F71FEA057D00FACDFA /* Faceunity */,
 				078012F01D1E57730093DE24 /* Main.storyboard */,
 				078012EE1D1E57730093DE24 /* MainViewController.swift */,
@@ -231,14 +225,6 @@
 				07F531651E275B82009BFE58 /* Info.plist */,
 			);
 			path = OpenLiveUITests;
-			sourceTree = "<group>";
-		};
-		0B43E7051FE7A99900DB4F50 /* DemoCode */ = {
-			isa = PBXGroup;
-			children = (
-				0B43E7081FE7A99900DB4F50 /* FUAPIDemoBar.framework */,
-			);
-			path = DemoCode;
 			sourceTree = "<group>";
 		};
 		CD6315F71FEA057D00FACDFA /* Faceunity */ = {
@@ -572,8 +558,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libs",
 					"$(PROJECT_DIR)/OpenLive",
-					"$(PROJECT_DIR)/OpenLive/DemoCode",
 					"\"$(SRCROOT)/OpenLive/Faceunity/FaceUnity-SDK-iOS\"",
+					"\"$(SRCROOT)/../../Faceunity\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/OpenLive/Faceunity/FaceUnity-SDK-iOS\"",
@@ -612,8 +598,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../libs",
 					"$(PROJECT_DIR)/OpenLive",
-					"$(PROJECT_DIR)/OpenLive/DemoCode",
 					"\"$(SRCROOT)/OpenLive/Faceunity/FaceUnity-SDK-iOS\"",
+					"\"$(SRCROOT)/../../Faceunity\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/OpenLive/Faceunity/FaceUnity-SDK-iOS\"",

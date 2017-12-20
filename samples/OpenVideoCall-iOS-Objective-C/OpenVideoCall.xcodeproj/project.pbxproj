@@ -28,23 +28,25 @@
 		076C59B61DDDDE7A00F813E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076C59B51DDDDE7A00F813E2 /* AVFoundation.framework */; };
 		07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D29C5C1E9E1EFE00C3583C /* libresolv.tbd */; };
 		07F531B91E28AE69009BFE58 /* OpenVideoCallUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */; };
+		CD6316521FEA163E00FACDFA /* FUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6316351FEA163E00FACDFA /* FUManager.m */; };
+		CD6316531FEA163E00FACDFA /* libnama.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63163A1FEA163E00FACDFA /* libnama.a */; };
+		CD6316541FEA163E00FACDFA /* release_note.txt in Resources */ = {isa = PBXBuildFile; fileRef = CD63163B1FEA163E00FACDFA /* release_note.txt */; };
+		CD6316551FEA163E00FACDFA /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63163D1FEA163E00FACDFA /* face_beautification.bundle */; };
+		CD6316561FEA163E00FACDFA /* v3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63163E1FEA163E00FACDFA /* v3.bundle */; };
+		CD63165B1FEA163E00FACDFA /* FUAPIDemoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6316481FEA163E00FACDFA /* FUAPIDemoBar.framework */; };
+		CD63165C1FEA163E00FACDFA /* bg_seg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164A1FEA163E00FACDFA /* bg_seg.bundle */; };
+		CD63165D1FEA163E00FACDFA /* EatRabbi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164B1FEA163E00FACDFA /* EatRabbi.bundle */; };
+		CD63165E1FEA163E00FACDFA /* gradient.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164C1FEA163E00FACDFA /* gradient.bundle */; };
+		CD63165F1FEA163E00FACDFA /* lixiaolong.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164D1FEA163E00FACDFA /* lixiaolong.bundle */; };
+		CD6316601FEA163E00FACDFA /* mask_matianyu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164E1FEA163E00FACDFA /* mask_matianyu.bundle */; };
+		CD6316611FEA163E00FACDFA /* Mood.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD63164F1FEA163E00FACDFA /* Mood.bundle */; };
+		CD6316621FEA163E00FACDFA /* yazui.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6316501FEA163E00FACDFA /* yazui.bundle */; };
+		CD6316631FEA163E00FACDFA /* yuguan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD6316511FEA163E00FACDFA /* yuguan.bundle */; };
+		CD6316651FEA165400FACDFA /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6316641FEA165400FACDFA /* AgoraRtcEngineKit.framework */; };
+		CD6316671FEA16D500FACDFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6316661FEA16D500FACDFA /* SystemConfiguration.framework */; };
+		CD6316691FEA172100FACDFA /* FUAPIDemoBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD6316481FEA163E00FACDFA /* FUAPIDemoBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDADA15A1F4E77280029684E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDADA1591F4E77280029684E /* Accelerate.framework */; };
-		CDADA15B1F4E77830029684E /* FUAPIDemoBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF27C71F4E72B000E5EE7E /* FUAPIDemoBar.framework */; };
-		CDADA15C1F4E77830029684E /* FUAPIDemoBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF27C71F4E72B000E5EE7E /* FUAPIDemoBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CDCF0F391F67ED6E002BAA03 /* bg_seg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDCF0F381F67ED64002BAA03 /* bg_seg.bundle */; };
-		CDD31ACF1F51883B001BDC45 /* gradient.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDD31ACD1F51883B001BDC45 /* gradient.bundle */; };
-		CDD31AD01F51883B001BDC45 /* Mood.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDD31ACE1F51883B001BDC45 /* Mood.bundle */; };
 		CDEF27A21F4E694B00E5EE7E /* AGVideoPreProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDEF27A11F4E694B00E5EE7E /* AGVideoPreProcessing.mm */; };
-		CDEF27A41F4E6B1C00E5EE7E /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF27A31F4E6B1C00E5EE7E /* AgoraRtcEngineKit.framework */; };
-		CDEF27BA1F4E725A00E5EE7E /* libnama.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEF27AB1F4E725A00E5EE7E /* libnama.a */; };
-		CDEF27BB1F4E725A00E5EE7E /* release_note.txt in Resources */ = {isa = PBXBuildFile; fileRef = CDEF27AC1F4E725A00E5EE7E /* release_note.txt */; };
-		CDEF27BC1F4E725A00E5EE7E /* face_beautification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDEF27AE1F4E725A00E5EE7E /* face_beautification.bundle */; };
-		CDEF27BD1F4E725A00E5EE7E /* v3.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDEF27AF1F4E725A00E5EE7E /* v3.bundle */; };
-		CDEF27C11F4E725A00E5EE7E /* lixiaolong.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDEF27B51F4E725A00E5EE7E /* lixiaolong.bundle */; };
-		CDEF27C51F4E725A00E5EE7E /* yuguan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDEF27B91F4E725A00E5EE7E /* yuguan.bundle */; };
-		CDEF27CB1F4E72B000E5EE7E /* FUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEF27C91F4E72B000E5EE7E /* FUManager.m */; };
-		CDFFAF0D1F51822D00A4E0D0 /* mask_liudehua.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDFFAF0C1F51822900A4E0D0 /* mask_liudehua.bundle */; };
-		CDFFAF0E1F51823C00A4E0D0 /* chibi_reimu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDFFAF0A1F51822900A4E0D0 /* chibi_reimu.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CDADA15C1F4E77830029684E /* FUAPIDemoBar.framework in Embed Frameworks */,
+				CD6316691FEA172100FACDFA /* FUAPIDemoBar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,27 +108,29 @@
 		07F531B61E28AE69009BFE58 /* OpenVideoCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenVideoCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F531B81E28AE69009BFE58 /* OpenVideoCallUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenVideoCallUITests.m; sourceTree = "<group>"; };
 		07F531BA1E28AE69009BFE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6316321FEA163E00FACDFA /* authpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = authpack.h; sourceTree = "<group>"; };
+		CD6316341FEA163E00FACDFA /* FUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUManager.h; sourceTree = "<group>"; };
+		CD6316351FEA163E00FACDFA /* FUManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUManager.m; sourceTree = "<group>"; };
+		CD6316381FEA163E00FACDFA /* funama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funama.h; sourceTree = "<group>"; };
+		CD6316391FEA163E00FACDFA /* FURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FURenderer.h; sourceTree = "<group>"; };
+		CD63163A1FEA163E00FACDFA /* libnama.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnama.a; sourceTree = "<group>"; };
+		CD63163B1FEA163E00FACDFA /* release_note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_note.txt; sourceTree = "<group>"; };
+		CD63163D1FEA163E00FACDFA /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
+		CD63163E1FEA163E00FACDFA /* v3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = v3.bundle; sourceTree = "<group>"; };
+		CD6316481FEA163E00FACDFA /* FUAPIDemoBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FUAPIDemoBar.framework; sourceTree = "<group>"; };
+		CD63164A1FEA163E00FACDFA /* bg_seg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_seg.bundle; sourceTree = "<group>"; };
+		CD63164B1FEA163E00FACDFA /* EatRabbi.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = EatRabbi.bundle; sourceTree = "<group>"; };
+		CD63164C1FEA163E00FACDFA /* gradient.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = gradient.bundle; sourceTree = "<group>"; };
+		CD63164D1FEA163E00FACDFA /* lixiaolong.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = lixiaolong.bundle; sourceTree = "<group>"; };
+		CD63164E1FEA163E00FACDFA /* mask_matianyu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mask_matianyu.bundle; sourceTree = "<group>"; };
+		CD63164F1FEA163E00FACDFA /* Mood.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mood.bundle; sourceTree = "<group>"; };
+		CD6316501FEA163E00FACDFA /* yazui.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = yazui.bundle; sourceTree = "<group>"; };
+		CD6316511FEA163E00FACDFA /* yuguan.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = yuguan.bundle; sourceTree = "<group>"; };
+		CD6316641FEA165400FACDFA /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcEngineKit.framework; path = ../../../libs/AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
+		CD6316661FEA16D500FACDFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CDADA1591F4E77280029684E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		CDCF0F371F67E948002BAA03 /* authpack-RTC2017.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "authpack-RTC2017.h"; sourceTree = "<group>"; };
-		CDCF0F381F67ED64002BAA03 /* bg_seg.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg_seg.bundle; sourceTree = "<group>"; };
-		CDD31ACD1F51883B001BDC45 /* gradient.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = gradient.bundle; sourceTree = "<group>"; };
-		CDD31ACE1F51883B001BDC45 /* Mood.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mood.bundle; sourceTree = "<group>"; };
 		CDEF27A01F4E694B00E5EE7E /* AGVideoPreProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGVideoPreProcessing.h; sourceTree = "<group>"; };
 		CDEF27A11F4E694B00E5EE7E /* AGVideoPreProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AGVideoPreProcessing.mm; sourceTree = "<group>"; };
-		CDEF27A31F4E6B1C00E5EE7E /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
-		CDEF27A91F4E725A00E5EE7E /* funama.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funama.h; sourceTree = "<group>"; };
-		CDEF27AA1F4E725A00E5EE7E /* FURenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FURenderer.h; sourceTree = "<group>"; };
-		CDEF27AB1F4E725A00E5EE7E /* libnama.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnama.a; sourceTree = "<group>"; };
-		CDEF27AC1F4E725A00E5EE7E /* release_note.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_note.txt; sourceTree = "<group>"; };
-		CDEF27AE1F4E725A00E5EE7E /* face_beautification.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = face_beautification.bundle; sourceTree = "<group>"; };
-		CDEF27AF1F4E725A00E5EE7E /* v3.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = v3.bundle; sourceTree = "<group>"; };
-		CDEF27B51F4E725A00E5EE7E /* lixiaolong.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = lixiaolong.bundle; sourceTree = "<group>"; };
-		CDEF27B91F4E725A00E5EE7E /* yuguan.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = yuguan.bundle; sourceTree = "<group>"; };
-		CDEF27C71F4E72B000E5EE7E /* FUAPIDemoBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FUAPIDemoBar.framework; sourceTree = "<group>"; };
-		CDEF27C81F4E72B000E5EE7E /* FUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FUManager.h; sourceTree = "<group>"; };
-		CDEF27C91F4E72B000E5EE7E /* FUManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FUManager.m; sourceTree = "<group>"; };
-		CDFFAF0A1F51822900A4E0D0 /* chibi_reimu.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = chibi_reimu.bundle; sourceTree = "<group>"; };
-		CDFFAF0C1F51822900A4E0D0 /* mask_liudehua.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = mask_liudehua.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,16 +138,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6316671FEA16D500FACDFA /* SystemConfiguration.framework in Frameworks */,
 				CDADA15A1F4E77280029684E /* Accelerate.framework in Frameworks */,
-				CDEF27A41F4E6B1C00E5EE7E /* AgoraRtcEngineKit.framework in Frameworks */,
 				07D29C5D1E9E1EFE00C3583C /* libresolv.tbd in Frameworks */,
-				CDEF27BA1F4E725A00E5EE7E /* libnama.a in Frameworks */,
+				CD6316531FEA163E00FACDFA /* libnama.a in Frameworks */,
 				076C59B61DDDDE7A00F813E2 /* AVFoundation.framework in Frameworks */,
 				076C59B41DDDDE7600F813E2 /* libc++.tbd in Frameworks */,
 				076C59B21DDDDE7000F813E2 /* AudioToolbox.framework in Frameworks */,
 				076C59B01DDDDE6900F813E2 /* VideoToolbox.framework in Frameworks */,
-				CDADA15B1F4E77830029684E /* FUAPIDemoBar.framework in Frameworks */,
 				076C59AE1DDDDE6100F813E2 /* CoreMedia.framework in Frameworks */,
+				CD63165B1FEA163E00FACDFA /* FUAPIDemoBar.framework in Frameworks */,
+				CD6316651FEA165400FACDFA /* AgoraRtcEngineKit.framework in Frameworks */,
 				076C59AC1DDDDE5D00F813E2 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,8 +188,8 @@
 				076C598F1DDDBCFE00F813E2 /* Controllers */,
 				076C59901DDDBD0600F813E2 /* Views */,
 				076C59911DDDBD0D00F813E2 /* Models */,
-				CDEF27A51F4E725A00E5EE7E /* Faceunity */,
-				CDEF27A31F4E6B1C00E5EE7E /* AgoraRtcEngineKit.framework */,
+				CD6316311FEA163E00FACDFA /* Faceunity */,
+				CD6316641FEA165400FACDFA /* AgoraRtcEngineKit.framework */,
 				076C59781DDDBC3500F813E2 /* AppDelegate.h */,
 				076C59791DDDBC3500F813E2 /* AppDelegate.m */,
 				076C59811DDDBC3500F813E2 /* Assets.xcassets */,
@@ -246,6 +251,7 @@
 		076C59AA1DDDDE5C00F813E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD6316661FEA16D500FACDFA /* SystemConfiguration.framework */,
 				CDADA1591F4E77280029684E /* Accelerate.framework */,
 				07D29C5C1E9E1EFE00C3583C /* libresolv.tbd */,
 				076C59B51DDDDE7A00F813E2 /* AVFoundation.framework */,
@@ -267,68 +273,70 @@
 			path = OpenVideoCallUITests;
 			sourceTree = "<group>";
 		};
-		CDEF27A51F4E725A00E5EE7E /* Faceunity */ = {
+		CD6316311FEA163E00FACDFA /* Faceunity */ = {
 			isa = PBXGroup;
 			children = (
-				CDEF27C61F4E72B000E5EE7E /* DemoCode */,
-				CDCF0F371F67E948002BAA03 /* authpack-RTC2017.h */,
-				CDEF27A71F4E725A00E5EE7E /* FaceUnity-SDK-iOS */,
-				CDEF27B21F4E725A00E5EE7E /* items */,
+				CD6316321FEA163E00FACDFA /* authpack.h */,
+				CD6316331FEA163E00FACDFA /* DemoCode */,
+				CD6316361FEA163E00FACDFA /* FaceUnity-SDK-iOS */,
+				CD6316481FEA163E00FACDFA /* FUAPIDemoBar.framework */,
+				CD6316491FEA163E00FACDFA /* items */,
 			);
-			path = Faceunity;
+			name = Faceunity;
+			path = ../../../Faceunity;
 			sourceTree = "<group>";
 		};
-		CDEF27A71F4E725A00E5EE7E /* FaceUnity-SDK-iOS */ = {
+		CD6316331FEA163E00FACDFA /* DemoCode */ = {
 			isa = PBXGroup;
 			children = (
-				CDEF27A81F4E725A00E5EE7E /* Headers */,
-				CDEF27AB1F4E725A00E5EE7E /* libnama.a */,
-				CDEF27AC1F4E725A00E5EE7E /* release_note.txt */,
-				CDEF27AD1F4E725A00E5EE7E /* Resources */,
+				CD6316341FEA163E00FACDFA /* FUManager.h */,
+				CD6316351FEA163E00FACDFA /* FUManager.m */,
+			);
+			path = DemoCode;
+			sourceTree = "<group>";
+		};
+		CD6316361FEA163E00FACDFA /* FaceUnity-SDK-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CD6316371FEA163E00FACDFA /* Headers */,
+				CD63163A1FEA163E00FACDFA /* libnama.a */,
+				CD63163B1FEA163E00FACDFA /* release_note.txt */,
+				CD63163C1FEA163E00FACDFA /* Resources */,
 			);
 			path = "FaceUnity-SDK-iOS";
 			sourceTree = "<group>";
 		};
-		CDEF27A81F4E725A00E5EE7E /* Headers */ = {
+		CD6316371FEA163E00FACDFA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				CDEF27A91F4E725A00E5EE7E /* funama.h */,
-				CDEF27AA1F4E725A00E5EE7E /* FURenderer.h */,
+				CD6316381FEA163E00FACDFA /* funama.h */,
+				CD6316391FEA163E00FACDFA /* FURenderer.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		CDEF27AD1F4E725A00E5EE7E /* Resources */ = {
+		CD63163C1FEA163E00FACDFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CDEF27AE1F4E725A00E5EE7E /* face_beautification.bundle */,
-				CDEF27AF1F4E725A00E5EE7E /* v3.bundle */,
+				CD63163D1FEA163E00FACDFA /* face_beautification.bundle */,
+				CD63163E1FEA163E00FACDFA /* v3.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CDEF27B21F4E725A00E5EE7E /* items */ = {
+		CD6316491FEA163E00FACDFA /* items */ = {
 			isa = PBXGroup;
 			children = (
-				CDCF0F381F67ED64002BAA03 /* bg_seg.bundle */,
-				CDD31ACD1F51883B001BDC45 /* gradient.bundle */,
-				CDD31ACE1F51883B001BDC45 /* Mood.bundle */,
-				CDFFAF0C1F51822900A4E0D0 /* mask_liudehua.bundle */,
-				CDEF27B51F4E725A00E5EE7E /* lixiaolong.bundle */,
-				CDFFAF0A1F51822900A4E0D0 /* chibi_reimu.bundle */,
-				CDEF27B91F4E725A00E5EE7E /* yuguan.bundle */,
+				CD63164A1FEA163E00FACDFA /* bg_seg.bundle */,
+				CD63164B1FEA163E00FACDFA /* EatRabbi.bundle */,
+				CD63164C1FEA163E00FACDFA /* gradient.bundle */,
+				CD63164D1FEA163E00FACDFA /* lixiaolong.bundle */,
+				CD63164E1FEA163E00FACDFA /* mask_matianyu.bundle */,
+				CD63164F1FEA163E00FACDFA /* Mood.bundle */,
+				CD6316501FEA163E00FACDFA /* yazui.bundle */,
+				CD6316511FEA163E00FACDFA /* yuguan.bundle */,
 			);
 			path = items;
-			sourceTree = "<group>";
-		};
-		CDEF27C61F4E72B000E5EE7E /* DemoCode */ = {
-			isa = PBXGroup;
-			children = (
-				CDEF27C71F4E72B000E5EE7E /* FUAPIDemoBar.framework */,
-				CDEF27C81F4E72B000E5EE7E /* FUManager.h */,
-				CDEF27C91F4E72B000E5EE7E /* FUManager.m */,
-			);
-			path = DemoCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,19 +423,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDEF27C11F4E725A00E5EE7E /* lixiaolong.bundle in Resources */,
-				CDEF27BB1F4E725A00E5EE7E /* release_note.txt in Resources */,
-				CDCF0F391F67ED6E002BAA03 /* bg_seg.bundle in Resources */,
+				CD6316611FEA163E00FACDFA /* Mood.bundle in Resources */,
+				CD63165C1FEA163E00FACDFA /* bg_seg.bundle in Resources */,
+				CD6316541FEA163E00FACDFA /* release_note.txt in Resources */,
 				076C59851DDDBC3500F813E2 /* LaunchScreen.storyboard in Resources */,
-				CDEF27BD1F4E725A00E5EE7E /* v3.bundle in Resources */,
+				CD6316631FEA163E00FACDFA /* yuguan.bundle in Resources */,
+				CD6316561FEA163E00FACDFA /* v3.bundle in Resources */,
+				CD6316621FEA163E00FACDFA /* yazui.bundle in Resources */,
+				CD6316601FEA163E00FACDFA /* mask_matianyu.bundle in Resources */,
+				CD63165E1FEA163E00FACDFA /* gradient.bundle in Resources */,
+				CD63165F1FEA163E00FACDFA /* lixiaolong.bundle in Resources */,
+				CD63165D1FEA163E00FACDFA /* EatRabbi.bundle in Resources */,
 				076C59821DDDBC3500F813E2 /* Assets.xcassets in Resources */,
-				CDFFAF0D1F51822D00A4E0D0 /* mask_liudehua.bundle in Resources */,
-				CDD31AD01F51883B001BDC45 /* Mood.bundle in Resources */,
-				CDFFAF0E1F51823C00A4E0D0 /* chibi_reimu.bundle in Resources */,
-				CDD31ACF1F51883B001BDC45 /* gradient.bundle in Resources */,
 				076C59801DDDBC3500F813E2 /* Main.storyboard in Resources */,
-				CDEF27C51F4E725A00E5EE7E /* yuguan.bundle in Resources */,
-				CDEF27BC1F4E725A00E5EE7E /* face_beautification.bundle in Resources */,
+				CD6316551FEA163E00FACDFA /* face_beautification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +455,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				076C59A01DDDBF2200F813E2 /* KeyCenter.m in Sources */,
-				CDEF27CB1F4E72B000E5EE7E /* FUManager.m in Sources */,
 				076C59961DDDBDE300F813E2 /* SettingsViewController.m in Sources */,
 				076C59A61DDDBF3100F813E2 /* VideoViewLayouter.m in Sources */,
 				076C599F1DDDBF2200F813E2 /* RoomViewController.m in Sources */,
@@ -454,6 +462,7 @@
 				076C59A51DDDBF3100F813E2 /* VideoSession.m in Sources */,
 				076C59A91DDDC9FD00F813E2 /* VideoView.m in Sources */,
 				076C597A1DDDBC3500F813E2 /* AppDelegate.m in Sources */,
+				CD6316521FEA163E00FACDFA /* FUManager.m in Sources */,
 				076C599A1DDDBF1500F813E2 /* MainViewController.m in Sources */,
 				076C59771DDDBC3500F813E2 /* main.m in Sources */,
 				CDEF27A21F4E694B00E5EE7E /* AGVideoPreProcessing.mm in Sources */,
@@ -598,14 +607,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenVideoCall",
-					"$(PROJECT_DIR)/OpenVideoCall/Faceunity/DemoCode",
+					"\"$(SRCROOT)/../../Faceunity\"",
+					"\"$(SRCROOT)/../../libs\"",
 				);
 				INFOPLIST_FILE = OpenVideoCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenVideoCall/Faceunity/FaceUnity-SDK-iOS",
+					"\"$(SRCROOT)/../../Faceunity/FaceUnity-SDK-iOS\"",
 				);
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenVideoCall;
@@ -622,14 +631,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenVideoCall",
-					"$(PROJECT_DIR)/OpenVideoCall/Faceunity/DemoCode",
+					"\"$(SRCROOT)/../../Faceunity\"",
+					"\"$(SRCROOT)/../../libs\"",
 				);
 				INFOPLIST_FILE = OpenVideoCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenVideoCall/Faceunity/FaceUnity-SDK-iOS",
+					"\"$(SRCROOT)/../../Faceunity/FaceUnity-SDK-iOS\"",
 				);
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.OpenVideoCall;
