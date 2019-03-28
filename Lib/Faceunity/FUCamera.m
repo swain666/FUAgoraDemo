@@ -77,7 +77,7 @@
         
         [self.videoConnection setVideoOrientation:AVCaptureVideoOrientationPortrait];
         if (self.videoConnection.supportsVideoMirroring && self.isFrontCamera) {
-            self.videoConnection.videoMirrored = YES;
+            self.videoConnection.videoMirrored = NO;
         }
         
         [_captureSession beginConfiguration]; // the session to which the receiver's AVCaptureDeviceInput is added.
@@ -156,7 +156,7 @@
     
     self.videoConnection.videoOrientation = AVCaptureVideoOrientationPortrait;
     if (self.videoConnection.supportsVideoMirroring) {
-        self.videoConnection.videoMirrored = isFront;
+        self.videoConnection.videoMirrored = !isFront;
     }
     [self.captureSession startRunning];
 }

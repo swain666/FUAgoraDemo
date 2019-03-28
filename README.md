@@ -4,6 +4,6 @@ FUAgoraDemo 是集成了 [Faceunity](https://github.com/Faceunity/FULiveDemo/tre
 
 传送门：
 
-[FUOpenLive-OC](FUOpenLive-OC)
+[FUAgora-OC](FUAgora-OC)
 
 [FUOpenLive-Swift](FUOpenLive-Swift)

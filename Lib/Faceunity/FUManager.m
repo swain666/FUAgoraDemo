@@ -79,23 +79,23 @@ static FUManager *shareManager = NULL;
     
     self.skinDetectEnable       = YES ;
     self.blurShape              = 0 ;
-    self.blurLevel              = 0.7 ;
-    self.whiteLevel             = 0.5 ;
-    self.redLevel               = 0.5 ;
+    self.blurLevel              = 1.0 ;
+    self.whiteLevel             = 1.0 ;
+    self.redLevel               = 1.0 ;
     
-    self.eyelightingLevel       = 0.7 ;
-    self.beautyToothLevel       = 0.7 ;
+    self.eyelightingLevel       = 1.0 ;
+    self.beautyToothLevel       = 1.0 ;
     
     self.faceShape              = 4 ;
-    self.enlargingLevel         = 0.4 ;
-    self.thinningLevel          = 0.4 ;
-    self.enlargingLevel_new         = 0.4 ;
-    self.thinningLevel_new          = 0.4 ;
+    self.enlargingLevel         = 1.0 ;
+    self.thinningLevel          = 1.0 ;
+    self.enlargingLevel_new     = 1.0 ;
+    self.thinningLevel_new      = 1.0 ;
     
-    self.jewLevel               = 0.3 ;
-    self.foreheadLevel          = 0.3 ;
-    self.noseLevel              = 0.5 ;
-    self.mouthLevel             = 0.4 ;
+    self.jewLevel               = 1.0 ;
+    self.foreheadLevel          = 1.0 ;
+    self.noseLevel              = 1.0 ;
+    self.mouthLevel             = 1.0 ;
     
     self.enableGesture = NO;
     self.enableMaxFaces = NO;
@@ -229,7 +229,7 @@ static FUManager *shareManager = NULL;
     [self setBeautyParams];
     
     /*Faceunity核心接口，将道具及美颜效果绘制到pixelBuffer中，执行完此函数后pixelBuffer即包含美颜及贴纸效果*/
-    CVPixelBufferRef buffer = [[FURenderer shareRenderer] renderPixelBuffer:pixelBuffer withFrameId:frameID items:items itemCount:sizeof(items)/sizeof(int) flipx:YES];//flipx 参数设为YES可以使道具做水平方向的镜像翻转
+    CVPixelBufferRef buffer = [[FURenderer shareRenderer] renderPixelBuffer:pixelBuffer withFrameId:frameID items:items itemCount:sizeof(items)/sizeof(int) flipx:NO];//flipx 参数设为YES可以使道具做水平方向的镜像翻转
     frameID += 1;
     
     return buffer;
